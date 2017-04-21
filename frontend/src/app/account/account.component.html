@@ -1,0 +1,67 @@
+<div class="card">
+  <h3 class="card-header">Account seach</h3>
+  <div class="card-block">
+    <div class="container-fluid">
+      <form (ngSubmit)="search(f)" #f="ngForm">
+        <div class="row">
+          <div class="col-sm-2">
+          </div>
+
+          <div class="col-sm-8">
+
+            <div class="form-group">
+              <label for="exampleInputEmail1">Account Number</label>
+              <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter account number">
+            </div>
+
+          </div>
+
+          <div class="col-sm-2">
+          </div>
+
+
+        </div>
+        <div class="row">
+
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-8 form-group">
+            <label for="exampleInputPassword1">Deposit Number</label>
+            <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Enter deposit number">
+          </div>
+
+          <div class="col-sm-2">
+          </div>
+        </div>
+        <div class="row">
+
+          <div class="col-sm-2">
+          </div>
+          <div class="col-sm-8 form-group">
+            <label for="exampleSelect1">Currency Code</label>
+            <select class="form-control" id="exampleSelect1">
+              <option>SGD</option>
+              <option>USD</option>
+            </select>
+          </div>
+
+          <div class="col-sm-2">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-9">
+          </div>
+          <div class="col-sm-1">
+            <div class="btn-block pull-right">
+            <button type="submit" class="btn btn-primary pull-right">Search</button>
+            </div>
+          </div>
+          <div class="col-sm-2">
+          </div>
+        </div>
+      </form>
+    </div>
+    
+  </div>
+</div>
+<app-account-detail></app-account-detail>

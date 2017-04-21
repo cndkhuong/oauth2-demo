@@ -1,0 +1,375 @@
+            <div class="container-fluid">
+
+                <div class="col-sm-12 card">
+
+                    <div class="form-group">
+
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th class="a" scope="col" colspan="6">Account Balance Information</th>
+                                </tr>
+                            </thead>
+
+
+                            <tbody *ngIf="!isTermProd">
+                            <tr>
+                                <td width="25%">Account number / Currency /Tranche ID :</td>
+                                <td colspan="2" width="25%">
+                                    <label name="AccountNumber" style="text-align:left;"></label>
+                                    <label name="blankspace" ></label>
+                                    <label name="AccountCurrency" style="text-align:left;"></label>
+                                    <label name="blankspace" ></label>
+                                    <label name="TrancheDescription" style="text-align:left;"></label>
+                                </td>
+                                <td width="25%">Account branch :</td>
+                                <td colspan="2" width="25%">
+                                    <label name="BranchName" class="control-label" style="text-align:left;"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Account name :</td>
+                                <td colspan="2">
+                                    <label name="AccountName1" class="control-label" style="text-align:left;"></label>
+                                </td>
+                                <td>Product type :</td>
+                                <td colspan="2">
+                                    <label name="ProductDescription" class="control-label" style="text-align:left;"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="2">
+                                    <label name="AccountName2" class="control-label" style="text-align:left;"></label>
+                                </td>
+                                <td>Opened date :</td>
+                                <td colspan="2">
+                                    <label name="OpenedDate" class="control-label" style="text-align:left;"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Available limit :</td>
+                                <td colspan="2">
+                                    <label name="AvailableLimit" class="label-numeric-right control-label"></label>
+                                </td>
+                                <td>Status date / Status :</td>
+                                <td colspan="2">
+                                    <label name="StatusDate" class="control-label" style="text-align:left;"></label>
+                                    <label name="blankspace" class="control-label"></label>
+                                    <label name="StatusDescription" class="control-label" style="text-align:left;"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Auto TD limit :</td>
+                                <td colspan="2">
+                                    <label name="AutoTDLimit" class="label-numeric-right control-label"></label>
+                                </td>
+                                <td>Approved limit :</td>
+                                <td colspan="2">
+                                    <label name="ApprovedLimit" class="label-numeric-right control-label"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ledger balance :</td>
+                                <td width="22%">
+                                    <label name="LedgerBalance" class="label-numeric control-label"></label>
+                                </td>
+                                <td width="3%">
+                                    <label name="LedgerBalanceSign" class="control-label"></label>
+                                </td>
+
+                                <td>Commitment limit :</td>
+                                <td colspan="2">
+                                    <label name="CommitmentLimit" class="label-numeric-right control-label"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Clearing floats :</td>
+                                <td colspan="2">
+                                    <label name="ClearingFloats" class="label-numeric-right control-label"></label>
+                                </td>
+                                <td>1-day floats :</td>
+                                <td colspan="2">
+                                    <label name="OneDayFloats" class="label-numeric-right control-label"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Earmarked amount :</td>
+                                <td colspan="2">
+                                    <label name="EarmarkedAmount" class="label-numeric-right control-label"></label>
+                                </td>
+                                <td>Collection amount :</td>
+                                <td colspan="2">
+                                    <label name="CollectionAmount" class="label-numeric-right control-label"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Available balance :</td>
+                                <td colspan="2">
+                                    <label name="AvailableBalance" class="label-numeric-right control-label"></label>
+                                </td>
+                                <td>Excess amount :</td>
+                                <td colspan="2">
+                                    <label name="ExcessAmount" class="label-numeric-right control-label"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" style="background:black;"></td>
+                            </tr>
+                            <tr>
+                                <td>Accrued credit interest :</td>
+                                <td colspan="2">
+                                    <label name="AccruedCreditInterest" class="label-numeric-right control-label"></label>
+                                </td>
+                                <td>Last statement date :</td>
+                                <td colspan="2">
+                                    <label name="LastStmtDate" class="control-label" style="text-align:left;"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Accrued bonus interest :</td>
+                                <td colspan="2">
+                                    <label name="AccruedBonusInterest" class="label-numeric-right control-label"></label>
+                                </td>
+                                <td>Last statement balance :</td>
+                                <td width="22%">
+                                    <label name="LastStmtBalance" class="label-numeric control-label"></label>
+                                </td>
+                                <td width="3%">
+                                    <label name="LastStmtBalanceSign" class="control-label"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Accrued OD interest :</td>
+                                <td colspan="2">
+                                    <label name="AccruedODInterest" class="label-numeric-right control-label"></label>
+                                </td>
+                                <td>Passbook balance :</td>
+                                <td colspan="2">
+                                    <label name="PassbookBalance" class="label-numeric-right control-label"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Accrued transaction charge :</td>
+                                <td colspan="2">
+                                    <label name="AccruedTransCharge" class="label-numeric-right control-label"></label>
+                                </td>
+                                <td>Last deposit timestamp :</td>
+                                <td colspan="2">
+                                    <label name="LastDepositTms" class="control-label" style="text-align:left;"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Accrued service fee :</td>
+                                <td colspan="2">
+                                    <label name="AccruedServiceCharge" class="label-numeric-right control-label"></label>
+                                </td>
+                                <td>Last withdrawal timestamp :</td>
+                                <td colspan="2">
+                                    <label name="LastWithdrawalTms" class="control-label" style="text-align:left;"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="2"></td>
+                                <td>Last transaction timestamp :</td>
+                                <td colspan="2">
+                                    <label name="LastTransactionTms" class="control-label" style="text-align:left;"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Net settlement amount :</td>
+                                <td width="22%">
+                                    <label name="NetSettlement" class="label-numeric control-label"></label>
+                                </td>
+                                <td width="3%">
+                                    <label name="NetSettlementSign" class="control-label"></label>
+                                </td>
+                                <td></td>
+                                <td colspan="2"></td>
+                            </tr>
+
+                            </tbody>
+
+
+                            <tbody *ngIf="!isSavProd">
+                            <tr>
+                                <td width="25%">Account number / Currency /Tranche ID :</td>
+                                <td colspan="2" width="25%">
+                                    <label name="AccountNumber" style="text-align:left;"></label>
+                                    <label name="blankspace" ></label>
+                                    <label name="AccountCurrency" style="text-align:left;"></label>
+                                </td>
+                                <td width="25%">Account branch :</td>
+                                <td colspan="2" width="25%">
+                                    <label name="BranchNumber" class="control-label" style="text-align:left;"></label>
+                                    <label name="BranchName" class="control-label" style="text-align:left;"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Account name :</td>
+                                <td colspan="2">
+                                    <label name="AccountName1" class="control-label" style="text-align:left;"></label>
+                                </td>
+                                <td>Product type :</td>
+                                <td colspan="2">
+                                    <label name="ProductType" class="control-label" style="text-align:left;"></label>
+                                    <label name="ProductDescription" class="control-label" style="text-align:left;"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="2"></td>
+                                <td>Opened date :</td>
+                                <td colspan="2">
+                                    <label name="OpenedDate" class="control-label" style="text-align:left;"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Available limit :</td>
+                                <td colspan="2">
+                                    <label name="AvailableLimit" class="label-numeric-right control-label"></label>
+                                </td>
+                                <td>Status date / Status :</td>
+                                <td colspan="2">
+                                    <label name="StatusDate" class="control-label" style="text-align:left;"></label>
+                                    <label name="blankspace" class="control-label"></label>
+                                    <label name="StatusCode" class="control-label" style="text-align:left;"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Auto TD limit :</td>
+                                <td colspan="2">
+                                    <label name="AutoTDLimit" class="label-numeric-right control-label"></label>
+                                </td>
+                                <td>Approved limit :</td>
+                                <td colspan="2">
+                                    <label name="ApprovedLimit" class="label-numeric-right control-label"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Ledger balance :</td>
+                                <td width="22%">
+                                    <label name="LedgerBalance" class="label-numeric control-label"></label>
+                                </td>
+                                <td width="3%">
+                                    <label name="LedgerBalanceSign" class="control-label"></label>
+                                </td>
+
+                                <td>Commitment limit :</td>
+                                <td colspan="2">
+                                    <label name="CommitmentLimit" class="label-numeric-right control-label"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Clearing floats :</td>
+                                <td colspan="2">
+                                    <label name="ClearingFloats" class="label-numeric-right control-label"></label>
+                                </td>
+                                <td>1-day floats :</td>
+                                <td colspan="2">
+                                    <label name="OneDayFloats" class="label-numeric-right control-label"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Earmarked amount :</td>
+                                <td colspan="2">
+                                    <label name="EarmarkedAmount" class="label-numeric-right control-label"></label>
+                                </td>
+                                <td>Collection amount :</td>
+                                <td colspan="2">
+                                    <label name="CollectionAmount" class="label-numeric-right control-label"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Available balance :</td>
+                                <td colspan="2">
+                                    <label name="AvailableBalance" class="label-numeric-right control-label"></label>
+                                </td>
+                                <td>Excess amount :</td>
+                                <td colspan="2">
+                                    <label name="ExcessAmount" class="label-numeric-right control-label"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="6" style="background:black;"></td>
+                            </tr>
+                            <tr>
+                                <td>Accrued credit interest :</td>
+                                <td colspan="2">
+                                    <label name="AccruedCreditInterest" class="label-numeric-right control-label"></label>
+                                </td>
+                                <td>Last statement date :</td>
+                                <td colspan="2">
+                                    <label name="LastStmtDate" class="control-label" style="text-align:left;"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Accrued bonus interest :</td>
+                                <td colspan="2">
+                                    <label name="AccruedBonusInterest" class="label-numeric-right control-label"></label>
+                                </td>
+                                <td>Last statement balance :</td>
+                                <td width="22%">
+                                    <label name="LastStmtBalance" class="label-numeric control-label"></label>
+                                </td>
+                                <td width="3%">
+                                    <label name="LastStmtBalanceSign" class="control-label"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Accrued OD interest :</td>
+                                <td colspan="2">
+                                    <label name="AccruedODInterest" class="label-numeric-right control-label"></label>
+                                </td>
+                                <td>Passbook balance :</td>
+                                <td colspan="2">
+                                    <label name="PassbookBalance" class="label-numeric-right control-label"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Accrued transaction charge :</td>
+                                <td colspan="2">
+                                    <label name="AccruedTransCharge" class="label-numeric-right control-label"></label>
+                                </td>
+                                <td>Last deposit timestamp :</td>
+                                <td colspan="2">
+                                    <label name="LastDepositTms" class="control-label" style="text-align:left;"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Accrued service fee :</td>
+                                <td colspan="2">
+                                    <label name="AccruedServiceCharge" class="label-numeric-right control-label"></label>
+                                </td>
+                                <td>Last withdrawal timestamp :</td>
+                                <td colspan="2">
+                                    <label name="LastWithdrawalTms" class="control-label" style="text-align:left;"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td colspan="2"></td>
+                                <td>Last transaction timestamp :</td>
+                                <td colspan="2">
+                                    <label name="LastTransactionTms" class="control-label" style="text-align:left;"></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Net settlement amount :</td>
+                                <td width="22%">
+                                    <label name="NetSettlement" class="label-numeric control-label"></label>
+                                </td>
+                                <td width="3%">
+                                    <label name="NetSettlementSign" class="control-label"></label>
+                                </td>
+                                <td></td>
+                                <td colspan="2"></td>
+                            </tr>
+
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+            </div>
